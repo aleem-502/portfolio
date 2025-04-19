@@ -203,7 +203,7 @@ body.dark-mode .skills-list li:hover{
   }
   
   body.dark-mode footer {
-    background-color: var(--card-bg-dark);
+    background-color:black;  
   }
   
   /* Resume Button Styling */
@@ -297,7 +297,7 @@ body.dark-mode #about button:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #b8b5d1;
+    border: 4px solid #e0e0e0;
     box-shadow: 0 10px 8px rgba(0,0,0,0.1);
   
   }
@@ -326,7 +326,7 @@ body.dark-mode #about button:hover {
     height: 200px;
     object-fit:cover;
     border-radius: 50%;
-    border: 4px solid #930000;
+    border: 4px solid #e0e0e0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
