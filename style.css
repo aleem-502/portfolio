@@ -286,14 +286,16 @@ body.dark-mode .project-card:hover {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
-    background: linear-gradient(90deg, #e3f0f0, #2099a9, #2062ae);
+    background-color: linear-gradient(90deg, #e3f0f0, #2099a9, #2062ae);
     color: rgb(13, 13, 13);
   }
   
   body.dark-mode footer {
-    background-color:black; 
-    color: #000; 
+    background-color: #00000000;   /* Black background */
+    color: #fff;              /* White text */
   }
+  
+  
   
   /* Resume Button Styling */
 #about button {
