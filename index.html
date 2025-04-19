@@ -10,16 +10,22 @@
   <header>
     <h1>Abdul Aleem</h1>
     <nav>
-      <ul>
+      <!-- Hamburger Menu Button -->
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      
+      <!-- Menu Links -->
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#certifications">certifications</a></li>
-        <li><button id="mode-toggle">🌙</button></li>
+        <li><a href="#certifications">Certifications</a></li>
+         <li><button id="mode-toggle">🌙</button></li>
       </ul>
     </nav>
   </header>
+  
+  
 
   <section id="about">
     <div class="about-container">
@@ -66,7 +72,7 @@
       <li>MS Word/Excel</li>
     </ul>
   
-    <h3>Strengths</h3>
+    <h2>Strengths</h2>
     <ul class="skills-list">
       <li>Teamwork</li>
       <li>Communication</li>
@@ -107,16 +113,24 @@
   <footer>
     <p>Any queries ? You can contact me !</p>
   </footer>
-
-  <script>
-    const toggleBtn = document.getElementById('mode-toggle');
-    const body = document.body;
-
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      body.classList.toggle('light-mode');
-      toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-  </script>
 </body>
+<script>
+  const toggleBtn = document.getElementById('mode-toggle');
+  const body = document.body;
+  const menuToggleBtn = document.querySelector('.menu-toggle');  // The hamburger button
+  const navLinks = document.querySelector('.nav-links');  // The navigation links
+
+  // Dark mode toggle
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+    toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+
+  // Hamburger menu toggle
+  menuToggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show'); // Toggle the 'show' class to display/hide the menu
+  });
+</script>
+
 </html>

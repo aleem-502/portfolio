@@ -26,76 +26,103 @@
     color: var(--text-dark);
   }
   
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-    color: white;
+ /* General styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-style: italic;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+}
+
+nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Links style */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a,
+.nav-links li button {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+/* Hover underline effect */
+.nav-links li a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(236, 14, 14);
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
-  h1{
-    font-style: italic;
-    font-size: medium;
-    font-family: cursive;
-  }
-  
-  body.dark-mode header {
-    background-color: var(--card-bg-dark);
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav a, nav button {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    position: relative;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: inherit;
-    padding: 8px 4px;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a::after {
-    content: '';
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #2c5364;
     position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(236, 14, 14); /* Or white for dark mode */
-    transition: width 0.3s ease;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    border-radius: 8px;
+    padding: 1rem;
   }
-  
-  nav ul li a:hover::after {
-    width: 100%;
+
+  .nav-links.show {
+    display: flex;
   }
-  
-  
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .nav-links li:last-child {
+    margin-bottom: 0;
+  }
+}
+
   
   section {
     padding: 2rem;
@@ -175,12 +202,12 @@ body.dark-mode .skills-list li:hover{
 /* Project Section */
 #projects {
   padding: 2rem;
-  background: linear-gradient(90deg, #e3f0f0, #2099a9, #2062ae);
-  color: var(--text-light);
+
+  color: rgb(19, 2, 2)
 }
 
 body.dark-mode #projects {
-  background-color: black;
+  background-color: rgb(20, 21, 23);
   color: var(--text-dark);
 }
 
