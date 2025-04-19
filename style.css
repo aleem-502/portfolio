@@ -203,7 +203,8 @@ body.dark-mode .skills-list li:hover{
   }
   
   body.dark-mode footer {
-    background-color:black;  
+    background-color:black; 
+    color: #000; 
   }
   
   /* Resume Button Styling */
